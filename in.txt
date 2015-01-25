@@ -1,0 +1,4 @@
+Design (invent) a 32 bit encryption algorithm (block encryption). This algorithm takes as input two 32 bit quantities, (plaintext and key) and produces a 32 bit quantity as an output (ciphertext).  The input, output and key are all type-less (or can be thought of as unsigned integers) – as they could be any form of data.
+
+The input and key should not be easily derivable from the output. Also the encryption algorithm must be reversible (decryption) when a key is known.
+
