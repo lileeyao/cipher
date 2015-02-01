@@ -5,7 +5,7 @@ This cipher makes use of a secret state which consists of two parts:
 1. A permutation of all 256 possible bytes(S).
 2. Two 8-bit index-points(i, j)
 
-
+<pre>
 for i from 0 to 255
     s[i] = i
 endfor
@@ -29,3 +29,5 @@ endwhile
 OUTPUT:
 
 out = in ^ keystream
+
+</pre>
