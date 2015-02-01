@@ -4,7 +4,9 @@
 This cipher generates a randomized key block. This block can be used for encryption by combining it with the plaintext using bitwise exclusive-or (XOR); decryption is performed the same way (since exclusive-or with any given data is an involution). Steps of performing this cipher are described below. The algorithm is inherited from the stream cipher RC4, with changes on the block generation and key length.
 </p>
 * Generating the block
+<p>
 This block is a permutation of all possible 256 bytes, denoted ‘S’ in the pseudocode. Keylength is defined as the number of bytes in the key and can be in the range of [1, 256], in this case, we say it is 32 bits.
+</p>
 <pre>
 func gen_block(key):
 for i from 0 to 255     
@@ -18,7 +20,9 @@ endfor
 return S
 </pre>
 * Encryption & Decryption
+<p>
 Assume we have an input of plaintext (denoted as input below, length = n), to encrypt the plaintext, we use the previously generated block S.
+</p>
 <pre>
 func encrypt_decrypt(S, input):
 for i from 0 to n:
@@ -32,7 +36,9 @@ return output
 </pre>
 Decryption can be performed as the same way according to xor’s involution.
 * Weakness & Crack
+<p>
 The 32-bit key is actually too short to support this cipher’s security. The cipher block has only 232 different cases, which can be easily enumerated by a super computer. Moreover, if we use a word dictionary to crack, the time cost will be even less. The brute force crack approach is described below. However, without knowing the key, it could be basically impossible to crack. In order to improve the security level, one can increase the length of key. Since the cipher is symmetric, a leak of the key will instantly cause the cipher comprosmised.
+</p>
 <pre>
 func brute_crack(dict, input):
 for key in dict:
