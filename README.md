@@ -1,6 +1,8 @@
 # cipher
 * Basic facts
+<p>
 This cipher generates a randomized key block. This block can be used for encryption by combining it with the plaintext using bitwise exclusive-or (XOR); decryption is performed the same way (since exclusive-or with any given data is an involution). Steps of performing this cipher are described below. The algorithm is inherited from the stream cipher RC4, with changes on the block generation and key length.
+</p>
 * Generating the block
 This block is a permutation of all possible 256 bytes, denoted ‘S’ in the pseudocode. Keylength is defined as the number of bytes in the key and can be in the range of [1, 256], in this case, we say it is 32 bits.
 <pre>
