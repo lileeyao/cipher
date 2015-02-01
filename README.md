@@ -3,9 +3,9 @@ A self-designed symmetric cipher class
 
 This cipher makes use of a secret state which consists of two parts:
 
-### 1. A permutation of all 256 possible bytes(S).
+* 1. A permutation of all 256 possible bytes(S).
 
-### 2. Two 8-bit index-points(i, j)
+* 2. Two 8-bit index-points(i, j)
 
 <pre>
 for i from 0 to 255
